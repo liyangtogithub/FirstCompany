@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/match_parent">
+    <FrameLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    <!--<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                 android:id="@+id/layout_matte"
+                 android:background="#95000000"
+                 android:visibility="gone">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                   android:id="@+id/imageView_refresh"
+                   android:layout_gravity="center"
+                   android:src="@drawable/ic_refresh"/>
+    </FrameLayout>-->
+    <!--<include layout="@layout/matte_view"/>-->
+    <com.desay.iwan2.common.app.widget.MatteLayer android:layout_width="match_parent"
+                                                  android:layout_height="match_parent"
+                                                  android:id="@+id/matteLayer"
+                                                  android:visibility="gone"/>
+</RelativeLayout>

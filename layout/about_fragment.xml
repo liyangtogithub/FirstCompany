@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/match_parent"
+                android:background="@drawable/about_bg">
+
+    <LinearLayout
+            android:id="@+id/sleep_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+        <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:drawableLeft="@drawable/btn_back_1"
+                android:text="@string/Menu_About"
+                android:textColor="@drawable/color_selector_3"
+                android:textSize="17sp"/>
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/iv_about_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/about_icon"
+            />
+    <ImageView
+            android:id="@+id/iv_about_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_about_icon"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/about_title_zh"
+            />
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_about_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/textView_appVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="15sp"/>
+
+        <TextView
+                android:id="@+id/textView_bleVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#000"
+                android:textSize="15sp"/>
+        <!--
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/textView_efm32Version"
+                  android:textColor="#000"/>
+        -->
+    </LinearLayout>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_alignParentBottom="true"
+              android:id="@+id/textView_bbs"
+              android:textColor="#a6a6a6"
+              android:layout_marginBottom="30dp"
+              android:textSize="15dp"
+              android:text="@string/bbs_name"
+              android:gravity="center"/>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/match_parent"
+              android:background="@color/app_backgrount"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <RelativeLayout style="@style/match_parent_w"
+                        android:id="@+id/layout_username"
+                        android:background="@drawable/menu_info_back"
+                        android:paddingTop="@dimen/menu_first_item_pad_top"
+                        android:paddingBottom="@dimen/menu_first_item_pad_bottom"
+                        >
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_centerInParent="true">
+
+                <ImageView
+                        android:id="@+id/iv_usericon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/menu_head_default"/>
+
+                <TextView
+                        android:id="@+id/tv_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/menu_first_item_text_margin_top"
+                        android:text="@string/toast_no_user"
+                        android:textColor="#7feefe"
+                        android:singleLine="true"
+                        android:textSize="@dimen/font_pixel_28"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        
+         <ListView
+                android:id="@+id/listView"
+                style="@style/match_parent"
+                android:layout_below="@id/layout_username"
+                android:divider="@color/app_backgrount"
+                android:dividerHeight="@dimen/menu_item_divider_height"
+               
+                android:listSelector="@color/transparent"/>
+    </RelativeLayout>
+
+</LinearLayout>

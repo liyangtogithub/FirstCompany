@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_backgrount"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_backgrount"
+        android:orientation="vertical" >
+
+        <include
+            style="@style/title"
+            layout="@layout/title_back" />
+
+        <include layout="@layout/line_edge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/data_15dp"
+            android:layout_marginLeft="@dimen/data_10dp"
+            android:layout_marginTop="@dimen/data_15dp"
+            android:text="@string/data_notice"
+            android:textColor="@color/color_font_small"
+            android:textSize="@dimen/data_15dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/data_wechat_click"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_backgrount"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <include layout="@layout/line_edge" />
+
+            <RelativeLayout
+                android:id="@+id/data_re_wechat"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/data_45dp"
+                android:background="@drawable/backrepeat"
+                android:paddingLeft="@dimen/data_10dp" >
+
+                <ImageView
+                    android:id="@+id/data_iv_wechat"
+                    style="@style/wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/data_icon_wechat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/data_5dp"
+                    android:layout_toRightOf="@id/data_iv_wechat"
+                    android:text="@string/data_wechat"
+                    android:textColor="@color/color_font_normal"
+                    android:textSize="@dimen/data_20dp" />
+
+                <ImageView
+                    android:id="@+id/data_to_wechat"
+                    style="@style/wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/data_10dp"
+                    android:background="@drawable/alert_arrows" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/data_5dp"
+                    android:layout_toLeftOf="@id/data_to_wechat"
+                    android:text="@string/data_wechat_connect"
+                    android:textColor="#f29797"
+                    android:textSize="@dimen/data_15dp" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_edge" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/data_re_wechat"
+                android:layout_marginLeft="@dimen/data_10dp"
+                android:layout_marginTop="@dimen/data_3dp"
+                android:text="@string/data_wechat_content"
+                android:textColor="@color/color_font_small"
+                android:textSize="@dimen/data_15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/data_qq_click"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/data_15dp"
+            android:background="@color/app_backgrount"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/line_edge" />
+
+            <RelativeLayout
+                android:id="@+id/data_re_qq"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/data_45dp"
+                android:background="@drawable/backrepeat"
+                android:paddingLeft="@dimen/data_10dp" >
+
+                <ImageView
+                    android:id="@+id/data_iv_qq"
+                    style="@style/wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/data_icon_qq" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/data_5dp"
+                    android:layout_toRightOf="@id/data_iv_qq"
+                    android:text="@string/data_qq"
+                    android:textColor="@color/color_font_normal"
+                    android:textSize="@dimen/data_20dp" />
+
+                <ImageView
+                    android:id="@+id/data_to_qq"
+                    style="@style/wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/data_10dp"
+                    android:background="@drawable/alert_arrows" />
+
+                <TextView
+                    android:id="@+id/data_tv_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/data_5dp"
+                    android:layout_toLeftOf="@id/data_to_qq"
+                    android:textColor="@color/color_font_normal"
+                    android:textSize="@dimen/data_15dp" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_edge" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/data_10dp"
+                android:layout_marginTop="@dimen/data_3dp"
+                android:text="@string/data_qq_content"
+                android:textColor="@color/color_font_small"
+                android:textSize="@dimen/data_15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/data_load_click"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/data_15dp"
+            android:background="@color/app_backgrount"
+            android:orientation="vertical" >
+
+            <include layout="@layout/line_edge" />
+
+            <RelativeLayout
+                android:id="@+id/data_re_load"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/data_45dp"
+                android:background="@drawable/backrepeat"
+                android:paddingLeft="@dimen/data_10dp" >
+
+                <ImageView
+                    android:id="@+id/data_iv_load"
+                    style="@style/wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/data_icon_load" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/data_5dp"
+                    android:layout_toRightOf="@id/data_iv_load"
+                    android:text="@string/data_load"
+                    android:textColor="@color/color_font_normal"
+                    android:textSize="@dimen/data_20dp" />
+
+                <ImageView
+                    android:id="@+id/data_to_load"
+                    style="@style/wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/data_10dp"
+                    android:background="@drawable/alert_arrows" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_edge" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/data_10dp"
+                android:layout_marginTop="@dimen/data_3dp"
+                android:text="@string/data_load_content"
+                android:textColor="@color/color_font_small"
+                android:textSize="@dimen/data_15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

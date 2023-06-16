@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/music_50dp" 
+    android:tileMode="repeat" 
+    android:background="@drawable/menu_back_select"
+    >
+
+    <TextView
+        android:id="@+id/tv_set_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/music_10dp"
+        android:layout_centerVertical="true"
+        android:text="30分钟"
+        android:textColor="@color/color_font_normal"
+        android:textSize="@dimen/music_42px" >
+    </TextView>
+    
+     <ImageView
+        android:id="@+id/iv_set_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/music_10dp"
+        android:background="@drawable/music_check"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/iv_set_nocheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/music_10dp"
+        android:background="@drawable/music_nocheck"
+        />
+
+</RelativeLayout>

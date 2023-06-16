@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                style="@style/match_parent"
+                android:background="@color/app_backgrount">
+
+    <include
+            android:id="@+id/band_up_title"
+            style="@style/title"
+            layout="@layout/title_back"/>
+
+    <LinearLayout
+            style="@style/match_parent_w"
+            android:layout_below="@id/band_up_title"
+            android:orientation="vertical">
+
+        <include layout="@layout/line_edge"/>
+
+        <ImageView
+                style="@style/wrap_content"
+                android:layout_marginTop="@dimen/band_up_img_margin_vertical"
+                android:layout_marginBottom="@dimen/band_up_img_margin_vertical"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/band_up_time_image"/>
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:background="@drawable/backrepeat">
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/band_up_item_pad_horizontal"
+                    android:paddingRight="@dimen/band_up_item_pad_horizontal"
+                    android:paddingTop="@dimen/band_up_item_pad_vertical_1"
+                    android:paddingBottom="@dimen/band_up_item_pad_vertical_1">
+
+                <TextView
+                        style="@style/band_up_txt_1_style"
+                        android:text="@string/band_up_text"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_band_up"
+                        style="@style/clock_checkbox_2"/>
+            </RelativeLayout>
+
+            <include layout="@layout/line_edge"/>
+
+            <RelativeLayout
+                    android:id="@+id/band_up_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/band_up_item_pad_horizontal"
+                    android:paddingRight="@dimen/band_up_item_pad_horizontal"
+                    android:paddingTop="@dimen/band_up_item_pad_vertical_2"
+                    android:paddingBottom="@dimen/band_up_item_pad_vertical_1">
+
+                <TextView
+                        style="@style/band_up_txt_1_style"
+                        android:text="@string/band_up_way"/>
+
+                <TextView
+                        android:id="@+id/tv_band_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/band_25dp"
+                        android:text="@string/band_up_left"
+                        android:textColor="#4d4d4d"
+                        android:textSize="@dimen/band_34px"/>
+
+                <!--
+                <TextView
+                    android:id="@+id/tv_band_right"
+                    style="@style/alert_sit_tv"
+                    android:layout_height="47dp"
+                    android:layout_width="47dp"
+                    android:textSize="18sp"
+                    android:layout_toLeftOf="@id/tv_band_close"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_line"
+                    android:text="@string/band_up_right" />
+
+                <TextView
+                        android:layout_height="47dp"
+                        android:layout_width="47dp"
+                        android:id="@+id/tv_band_left"
+                        style="@style/alert_sit_tv"
+                        android:layout_toLeftOf="@id/tv_band_right"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/band_shape_round_stroke_blue"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:textColor="@color/deep_blue"
+                        android:text="@string/band_up_left" />
+                -->
+
+                <ImageView
+                        style="@style/wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/alert_arrows"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/line_edge"/>
+
+        <TextView
+                android:id="@+id/tv_band_notice"
+                style="@style/match_parent_w"
+                android:layout_marginLeft="@dimen/band_10dp"
+                android:layout_marginRight="@dimen/band_10dp"
+                android:layout_marginTop="@dimen/band_up_notice_margin_top"
+                android:text="@string/band_up_notice2"
+                android:textColor="#969596"
+                android:textSize="@dimen/band_34px"/>
+    </LinearLayout>
+
+</RelativeLayout>

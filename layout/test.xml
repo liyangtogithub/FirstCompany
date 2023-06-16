@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res/com.desay.fitband"
+                style="@style/match_parent">
+                <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+       <!-- <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp" >
+
+            <com.desay.iwan2.module.summary.widget.TrackProgressBar
+                android:id="@+id/trackProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:haloRadius="5dp"
+                app:trackWidth="18dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp" >
+
+            <dolphin.tools.common.widget.DoughnutProgressBar
+                android:id="@+id/doughnutProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:haloRadius="5dp"
+                app:trackWidth="18dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp" >
+
+            <com.desay.iwan2.module.summary.widget.PlotGradientColorBarRuler
+                android:id="@+id/ruler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout> -->
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="test"
+                android:id="@+id/btn_test"
+                android:onClick="onClick"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="board_update"
+                android:id="@+id/btn_board_update"
+                android:onClick="onClick"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="分步：connect"
+                android:id="@+id/btn_connect"
+                android:onClick="onClick"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="disconnect"
+                android:id="@+id/btn_disconnect"
+                android:onClick="onClick"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="分步：发送转换DFU模式命令"
+                android:id="@+id/btn_to_dfu"
+                android:onClick="onClick"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="分步：发送重启命令"
+                android:id="@+id/btn_reset"
+                android:onClick="onClick"/>
+       
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="分步：下载网上APP文件"
+                android:id="@+id/btn_download_app"
+                android:onClick="onClick"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="分步：下载网上DFU文件"
+                android:id="@+id/btn_download_dfu"
+                android:onClick="onClick"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="分步：下载网上EF32文件"
+                android:id="@+id/btn_download_ef"
+                android:onClick="onClick"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="efm32_update"
+                android:id="@+id/btn_efm32_update"
+                android:onClick="onClick"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:id="@+id/money_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/money_head_bg">
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:layout_marginLeft="@dimen/money_summary_view_allmoney_margin_left"
+                          android:layout_marginTop="@dimen/money_summary_view_allmoney_margin_top">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/fortune"
+                        android:gravity="bottom"
+                        android:drawablePadding="3dp"
+                        android:textSize="@dimen/money_summary_view_ll1_text4_size"
+                        android:textColor="#808080"
+                        android:text="@string/gold_own"/>
+                <TextView
+                        android:id="@+id/textView_allmoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:drawablePadding="3dp"
+                        android:textColor="#ef9f1a"
+                        android:textSize="@dimen/money_summary_view_ll1_text3_size"
+                        android:text="0"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:textSize="@dimen/money_summary_view_ll1_text4_size"
+                        android:textColor="#808080"
+                        android:text="@string/gold_coin"/>
+            </LinearLayout>
+
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/money_summary_view_todaymoney_margin_top">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:layout_centerVertical="true"
+                          android:layout_alignParentLeft="true"
+                          android:layout_marginLeft="@dimen/money_summary_view_label1_margin"
+                          android:textSize="@dimen/money_summary_view_ll1_text1_size"
+                          android:textColor="#424242"
+                          android:text="@string/CoinGainLabel1"
+                          android:layout_toLeftOf="@+id/textView_todaymoney"/>
+                <TextView
+                        android:id="@+id/textView_todaymoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#EBA128"
+                        android:layout_centerInParent="true"
+                        android:textSize="@dimen/money_summary_view_todaymoney_size"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:layout_centerVertical="true"
+                          android:layout_alignParentRight="true"
+                          android:layout_marginRight="@dimen/money_summary_view_label1_margin"
+                          android:gravity="right"
+                          android:textSize="@dimen/money_summary_view_ll1_text1_size"
+                          android:textColor="#424242"
+                          android:text="@string/CoinGainLabel2"
+                          android:layout_toRightOf="@+id/textView_todaymoney"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <ScrollView
+                android:id="@+id/money_scroll"
+                style="@style/match_parent"
+                android:fillViewport="true"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/money_summary_view_ll1_margin"
+                android:paddingRight="@dimen/money_summary_view_ll1_margin"
+                android:paddingLeft="@dimen/money_summary_view_ll1_margin"
+                android:scrollbars="none">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                          android:orientation="vertical">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_corner_white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/money_summary_view_ll1_pading">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#424242"
+                            android:text="@string/CoinGoldCoinLabel"
+                            android:textSize="@dimen/money_summary_view_ll1_text1_size"/>
+
+                    <TextView
+                            android:id="@+id/text_listtips"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#7e7e7e"
+                            android:textSize="@dimen/money_summary_view_ll1_text2_size"/>
+
+                    <com.desay.iwan2.module.money.ListLayout
+                            android:id="@+id/list_moneys"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/money_summary_view_ll2_layout_reward_margin_vertical"
+                            android:layout_marginRight="@dimen/money_summary_view_ll1_list_margin"
+                            android:layout_marginLeft="@dimen/money_summary_view_ll1_list_margin"
+                            android:orientation="vertical"/>
+                    <!--<ListView android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:id="@+id/list_moneys"
+                              android:cacheColorHint="@null"
+                              android:divider="#ededed"
+                              android:dividerHeight="0.5dp"></ListView>-->
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/money_summary_view_ll1_margin"
+                        android:layout_marginBottom="@dimen/money_summary_view_ll1_margin"
+                        android:padding="@dimen/money_summary_view_ll1_pading"
+                        android:background="@drawable/rectangle_corner_white"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#424242"
+                            android:text="@string/CoinGoodHabitLabel"
+                            android:textSize="@dimen/money_summary_view_ll1_text1_size"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="#7e7e7e"
+                            android:text="@string/CoinGoodHabitTips"
+                            android:textSize="@dimen/money_summary_view_ll1_text2_size"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/money_summary_view_ll2_layout_reward_margin_vertical"
+                            android:orientation="vertical">
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/money_summary_view_ll2_layout_reward_margin_vertical">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="#898989"
+                                    android:textSize="@dimen/money_summary_listitem_text1_size"
+                                    android:text="@string/CoinWeekStepLabel"
+                                    android:layout_toLeftOf="@+id/habit_reward1"
+                                    android:layout_alignParentLeft="true"/>
+
+                            <TextView
+                                    android:id="@+id/habit_reward1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/money_shape_round_stroke_gray"
+                                    android:gravity="center"
+                                    android:textColor="@color/money_summary_color_0"
+                                    android:text="50"
+                                    android:textSize="@dimen/money_summary_view_ll2_habit_reward_size"/>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                                android:id="@+id/layout_reward1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:orientation="horizontal">
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitA7"
+                                      android:text="@string/CoinSun"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitA1"
+                                      android:text="@string/CoinMon"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitA2"
+                                      android:text="@string/CoinTue"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitA3"
+                                      android:text="@string/CoinWen"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitA4"
+                                      android:text="@string/CoinThu"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitA5"
+                                      android:text="@string/CoinFri"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitA6"
+                                      android:text="@string/CoinSat"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="@dimen/money_summary_divider"
+                          android:background="#ededed"
+                          android:layout_marginTop="5dp"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/money_summary_view_ll2_layout_reward_margin_vertical"
+                            android:orientation="vertical">
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/money_summary_view_ll2_layout_reward_margin_vertical">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="#898989"
+                                    android:layout_toLeftOf="@+id/habit_reward2"
+                                    android:layout_alignParentLeft="true"
+                                    android:textSize="@dimen/money_summary_listitem_text1_size"
+                                    android:text="@string/CoinWeekSleepLabel"/>
+
+                            <TextView
+                                    android:id="@+id/habit_reward2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/money_shape_round_stroke_gray"
+                                    android:gravity="center"
+                                    android:textColor="@color/money_summary_color_0"
+                                    android:text="50"
+                                    android:textSize="@dimen/money_summary_view_ll2_habit_reward_size"/>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                                android:id="@+id/layout_reward2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/money_summary_view_ll2_layout_reward_margin_vertical"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center_horizontal">
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitB7"
+                                      android:text="@string/CoinSun"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitB1"
+                                      android:text="@string/CoinMon"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitB2"
+                                      android:text="@string/CoinTue"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitB3"
+                                      android:text="@string/CoinWen"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitB4"
+                                      android:text="@string/CoinThu"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitB5"
+                                      android:text="@string/CoinFri"/>
+                            <CheckBox style="@style/money_summary_habit"
+                                      android:id="@+id/checkBox_habitB6"
+                                      android:text="@string/CoinSat"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="@dimen/money_summary_divider"
+                          android:background="#ededed"
+                          android:layout_marginTop="5dp"/>
+
+                    <TextView
+                            android:id="@+id/text_bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/money_summary_view_ll2_layout_reward_margin_vertical"
+                            android:layout_marginBottom="@dimen/money_summary_view_ll2_layout_reward_margin_vertical"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#898989"
+                            android:textSize="@dimen/money_summary_listitem_text1_size"
+                            android:text="@string/CoinGoodoneWeek"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/money_empty_layout"
+            style="@style/match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/layout_e1"
+                      android:visibility="invisible"
+                      android:layout_marginLeft="@dimen/money_summary_view_allmoney_margin_left"
+                      android:layout_marginTop="@dimen/money_summary_view_allmoney_margin_top">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/fortune"
+                    android:gravity="bottom"
+                    android:drawablePadding="3dp"
+                    android:textSize="12sp"
+                    android:textColor="#808080"
+                    android:text="@string/gold_own"/>
+            <TextView
+                    android:id="@+id/my_textView_allmoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:drawablePadding="3dp"
+                    android:textColor="#ef9f1a"
+                    android:textSize="18sp"
+                    android:text="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:textSize="12sp"
+                    android:textColor="#808080"
+                    android:text="@string/gold_coin"/>
+        </LinearLayout>
+
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout
+                    style="@style/match_parent"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                <TextView
+                        android:id="@+id/textView_e1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        android:text="@string/gold_please_turn_on_net"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/money_summary_view_empty_text4_size"/>
+
+                <ImageView
+                        style="@style/wrap_content"
+                        android:src="@drawable/money_empty"/>
+
+                <TextView
+                        android:id="@+id/textView_e4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_marginTop="@dimen/money_summary_view_empty_text2_margin_t"
+                        android:gravity="center"
+                        android:text="@string/gold_go"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/money_summary_view_empty_text2_size"/>
+
+                <TextView
+                        android:id="@+id/textView_e3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/money_summary_view_empty_text2_margin_t"
+                        android:gravity="center"
+                        android:text="@string/gold_sport"
+                        android:textColor="@color/color_font_small"
+                        android:visibility="invisible"
+                        android:textSize="@dimen/money_summary_view_empty_text3_size"/>
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView_e2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/money_summary_view_empty_text3_margin_b"
+                    android:layout_marginLeft="@dimen/money_summary_view_empty_text3_margin_h"
+                    android:layout_marginRight="@dimen/money_summary_view_empty_text3_margin_h"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/gold_tips"
+                    android:textColor="#cecece"
+                    android:visibility="invisible"
+                    android:textSize="@dimen/money_summary_view_empty_text5_size"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/money_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/money_summary_view_money_title_height"
+            android:gravity="center_vertical">
+
+        <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableLeft="@drawable/btn_return_2"
+                android:text="XXXX-XX-XX XXX"
+                android:textColor="#424243"
+                android:textSize="@dimen/money_summary_view_empty_button_size"/>
+    </LinearLayout>
+
+</RelativeLayout>

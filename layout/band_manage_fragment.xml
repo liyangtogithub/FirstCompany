@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_parent"
+    android:background="@color/app_backgrount"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/rl_title"
+        style="@style/title"
+        layout="@layout/title_back" />
+
+    <LinearLayout
+        style="@style/match_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_edge" />
+
+        <RelativeLayout
+            android:id="@+id/band_layout1"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/band_60dp"
+            android:layout_marginTop="@dimen/band_20dp"
+            android:background="@drawable/backrepeat" >
+
+            <ImageView
+                android:id="@+id/iv_band_add"
+                style="@style/wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/band_add" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/band_15dp"
+                android:layout_toRightOf="@id/iv_band_add"
+                android:text="@string/band_add"
+                android:textColor="@color/color_font_normal"
+                android:textSize="@dimen/band_40px" />
+
+            <TextView
+                android:id="@+id/tv_band_add"
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/band_25dp"
+                android:textColor="#848484"
+                android:text="@string/band_add_title" />
+
+            <ImageView
+                android:id="@+id/iv_no_add"
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/band_25dp"
+                android:background="@drawable/band_no_add"
+                android:visibility="gone" />
+
+            <ImageView
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/band_5dp"
+                android:background="@drawable/alert_arrows" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_edge" />
+
+        <TextView
+            android:id="@+id/tv_band_add_notice"
+            style="@style/wrap_content"
+            android:layout_marginLeft="@dimen/band_10dp"
+            android:layout_marginTop="@dimen/band_10dp"
+            android:textColor="#848484"
+            android:text="@string/band_add_notice2" />
+  
+  <LinearLayout
+        android:id="@+id/band_use_layout"
+        style="@style/match_parent"
+        android:orientation="vertical" >
+            
+        <RelativeLayout
+            android:id="@+id/band_layout4"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/band_60dp"
+            android:layout_marginTop="@dimen/band_25dp"
+            android:background="@drawable/backrepeat" >
+
+            <ImageView
+                android:id="@+id/iv_band_up"
+                style="@style/wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/band_up" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/band_15dp"
+                android:layout_toRightOf="@id/iv_band_up"
+                android:text="@string/band_up_text"
+                android:textColor="@color/color_font_normal"
+                android:textSize="@dimen/band_40px" />
+
+            <TextView
+                android:id="@+id/tv_up_hand"
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/band_25dp"
+                android:textColor="#848484"
+                android:text="@string/band_up_left" />
+
+            <ImageView
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/band_5dp"
+                android:layout_marginRight="@dimen/band_5dp"
+                android:background="@drawable/alert_arrows" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_edge" />
+
+        <RelativeLayout
+            android:id="@+id/band_layout5"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/band_60dp"
+            android:background="@drawable/backrepeat" >
+
+            <ImageView
+                android:id="@+id/iv_band_sleep"
+                style="@style/wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/band_sleep" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/band_15dp"
+                android:layout_toRightOf="@id/iv_band_sleep"
+                android:text="@string/band_sleep_set"
+                android:textColor="@color/color_font_normal"
+                android:textSize="@dimen/band_40px" />
+
+            <TextView
+                android:id="@+id/tv_check_sleep"
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#848484"
+                android:layout_marginRight="@dimen/band_25dp"
+                android:text="@string/band_sleep_closed" />
+
+            <ImageView
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/band_5dp"
+                android:background="@drawable/alert_arrows" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_edge" />
+
+        <RelativeLayout
+            android:id="@+id/band_layout2"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/band_60dp"
+            android:layout_marginTop="@dimen/band_20dp"
+            android:background="@drawable/backrepeat" >
+
+            <ImageView
+                android:id="@+id/iv_band_upgrade"
+                style="@style/wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/band_upgrade" />
+
+            <TextView
+                android:id="@+id/tv_band_upgrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/band_15dp"
+                android:layout_toRightOf="@id/iv_band_upgrade"
+                android:text="@string/band_upgrade"
+                android:textColor="@color/color_font_normal"
+                android:textSize="@dimen/band_40px" />
+
+            <ImageView
+                android:id="@+id/iv_band_upgrade_title"
+                style="@style/wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/band_10dp"
+                android:layout_toRightOf="@id/tv_band_upgrade"
+                android:background="@drawable/band_upgrade_title"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_upgrade_notice"
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/band_20dp"
+                android:textColor="#848484"
+                android:text="@string/band_no_upgrade" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_edge" />
+
+        <RelativeLayout
+            android:id="@+id/band_layout3"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/band_60dp"
+            android:background="@drawable/backrepeat" >
+
+            <ImageView
+                android:id="@+id/iv_correct_heartrate"
+                style="@style/wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/band_check" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/band_15dp"
+                android:layout_toRightOf="@id/iv_correct_heartrate"
+                android:text="@string/band_correct_watch"
+                android:textColor="@color/color_font_normal"
+                android:textSize="@dimen/band_40px" />
+
+            <ImageView
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/band_5dp"
+                android:background="@drawable/alert_arrows" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_edge" />
+
+        <RelativeLayout
+            android:id="@+id/band_layout6"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/band_60dp"
+            android:background="@drawable/backrepeat" >
+
+            <ImageView
+                android:id="@+id/iv_band_off"
+                style="@style/wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/band_off" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/band_15dp"
+                android:layout_toRightOf="@id/iv_band_off"
+                android:text="@string/band_off"
+                android:textColor="@color/color_font_normal"
+                android:textSize="@dimen/band_40px" />
+
+            <ImageView
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/band_5dp"
+                android:background="@drawable/alert_arrows" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_edge" />
+
+        <TextView
+            style="@style/wrap_content"
+            android:layout_marginLeft="@dimen/band_10dp"
+            android:layout_marginTop="@dimen/band_10dp"
+            android:textColor="#848484"
+            android:text="@string/band_close_title" />
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

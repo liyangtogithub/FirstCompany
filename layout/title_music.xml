@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_title"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/music_40dp"
+    android:background="@color/white" >
+
+     <RelativeLayout
+        android:id="@+id/relative_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@drawable/selector_icon" >
+    <ImageView
+        android:id="@+id/list_return"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingLeft="@dimen/music_5dp"
+        android:paddingRight="@dimen/music_5dp"
+        android:src="@drawable/btn_return_2" />
+
+    <TextView
+        android:id="@+id/list_title"
+        style="@style/wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/list_return"
+        android:gravity="center"
+        android:text="@string/music_list"
+        android:textColor="@color/color_font_normal"
+        android:textSize="@dimen/music_36px" 
+        /> 
+</RelativeLayout>
+    <TextView
+        android:id="@+id/list_tv_add"
+        style="@style/wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/music_10dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@color/color_font_normal"
+        android:textSize="@dimen/music_36px" 
+        android:background="@drawable/selector_icon"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/list_tv_remove"
+        style="@style/wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/music_14dp"
+        android:layout_toLeftOf="@id/list_tv_add"
+        android:gravity="center"
+        android:textColor="@color/color_font_normal"
+        android:textSize="@dimen/music_36px" 
+        android:background="@drawable/selector_icon"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

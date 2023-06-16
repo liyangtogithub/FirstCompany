@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/app_backgrount"
+    >
+
+    <include
+        android:id="@+id/rl_title"
+        style="@style/title"
+        layout="@layout/title_music" />
+    
+    <include 
+        layout="@layout/line_edge" 
+        android:layout_height="@dimen/music_1dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_title"
+        />
+    
+      <ListView
+        android:id="@+id/lv_list"
+        android:layout_height="@dimen/music_323dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_title"
+        android:layout_marginTop="@dimen/music_20dp"
+        android:background="@color/white"
+        android:choiceMode="singleChoice"
+        android:divider="#d6d6d6"
+        android:dividerHeight="@dimen/music_1dp"
+        android:listSelector="@color/transparent" 
+        android:cacheColorHint="#00000000" />
+
+</RelativeLayout>

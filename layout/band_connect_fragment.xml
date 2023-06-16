@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/match_parent"
+                android:background="@color/white">
+    <LinearLayout
+            style="@style/match_parent"
+            android:orientation="vertical">
+            
+            <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/rl_title"
+                style="@style/title"
+                layout="@layout/title_back" />
+
+            <TextView
+                android:id="@+id/tv_connnect_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@color/transparent"
+                android:text="@string/band_connect_pass"
+                android:textColor="@color/color_font_normal"
+                android:textSize="@dimen/font_pixel_32" />
+        </RelativeLayout>
+
+        <ScrollView
+                android:id="@+id/layout_1"
+                style="@style/match_parent"
+                android:fillViewport="true"
+                android:visibility="visible"
+                android:scrollbars="none">
+
+            <RelativeLayout
+                    style="@style/match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    
+                 <LinearLayout
+                    android:id="@+id/layout_band_connect"
+                    style="@style/wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/edge_30"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@drawable/shape_oval_blue"
+                        android:textSize="@dimen/font_pixel_32"/>
+                     <View 
+                          android:layout_width="60dp"
+                          android:layout_height="3dp"
+                          android:background="@color/color_blue_connect"
+                          />
+                      <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@drawable/shape_oval_blue"
+                        android:textSize="@dimen/font_pixel_28"/>
+                      <View 
+                          android:layout_width="60dp"
+                          android:layout_height="3dp"
+                          android:background="@color/color_blue_connect"
+                          />
+                      <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="3"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@drawable/shape_oval_blue"
+                        android:textSize="@dimen/font_pixel_28"/>
+                
+                </LinearLayout>
+                 <TextView
+                        android:id="@+id/tv_band_connect"
+                        style="@style/match_parent_w"
+                        android:layout_below="@id/layout_band_connect"
+                        android:layout_marginLeft="@dimen/edge_54"
+                        android:layout_marginRight="@dimen/edge_20"
+                        android:layout_marginTop="80dp"
+                        android:text="@string/band_connect_notice1"
+                        android:textColor="@color/color_font_blue"
+                        android:textSize="@dimen/font_pixel_30"/>
+                
+                <ImageView
+                        android:id="@+id/iv_band_set"
+                        style="@style/wrap_content"
+                        android:layout_below="@id/tv_band_connect"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/band_connect_set"/>
+
+                <Button
+                        android:id="@+id/bt_connect"
+                        style="@style/button"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="30dp"
+                        android:text="@string/next_step"
+                        android:textColor="@color/color_font_normal"
+                        android:textSize="@dimen/font_pixel_30"/>
+
+            </RelativeLayout>
+        </ScrollView>
+        <ScrollView 
+                    android:id="@+id/layout_2"
+                    style="@style/match_parent"
+                    android:fillViewport="true"
+                    android:visibility="gone"
+                    android:scrollbars="none">
+
+            <LinearLayout
+                    style="@style/match_parent"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                
+                 <LinearLayout
+                    android:id="@+id/layout_band_reconnect"
+                    style="@style/wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/edge_20"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                  
+                     <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@drawable/shape_oval_blue"
+                        android:textSize="@dimen/font_pixel_28"/>
+                   
+                     <View 
+                          android:layout_width="60dp"
+                          android:layout_height="3dp"
+                          android:background="@color/color_blue_connect"
+                          />
+                     
+                      <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@drawable/shape_oval_blue"
+                        android:textSize="@dimen/font_pixel_32"/>
+                      
+                      <View 
+                          android:layout_width="60dp"
+                          android:layout_height="3dp"
+                          android:background="@color/color_blue_connect"
+                          />
+                      <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="3"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@drawable/shape_oval_blue"
+                        android:textSize="@dimen/font_pixel_28"/>
+                
+                </LinearLayout>
+                 <TextView
+                        android:id="@+id/tv_band_reconnect"
+                        style="@style/match_parent_w"
+                        android:layout_below="@id/layout_band_reconnect"
+                        android:layout_marginLeft="@dimen/edge_54"
+                        android:layout_marginRight="@dimen/edge_20"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/band_connect_notice2"
+                        android:textColor="@color/color_font_blue"
+                        android:textSize="@dimen/font_pixel_30"/>
+
+                  <RelativeLayout
+                    android:id="@+id/layout_band_confirm"
+                    style="@style/wrap_content"
+                    android:background="@color/white"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/tv_band_reconnect"
+                    >
+                    <ImageView
+                        style="@style/wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/band_connect_confirm"/>
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/band_connect_confirm"
+                        android:textColor="@color/color_font_blue"
+                        android:textSize="@dimen/font_pixel_30"/>
+                
+                 </RelativeLayout>
+                <TextView
+                        android:id="@+id/tv_band_alert"
+                        style="@style/match_parent_w"
+                        android:layout_marginLeft="@dimen/edge_54"
+                        android:layout_marginRight="@dimen/edge_20"
+                        android:layout_below="@id/layout_band_confirm"
+                        android:text="@string/band_connect_notice3"
+                        android:textColor="@color/color_font_orange"
+                        android:textSize="@dimen/fontsize_36"/>
+                    <TextView
+                        style="@style/match_parent_w"
+                        android:layout_marginLeft="@dimen/edge_54"
+                        android:layout_marginRight="@dimen/edge_20"
+                        android:layout_below="@id/tv_band_alert"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/band_connect_notice4"
+                        android:textColor="@color/color_font_small"
+                        android:textSize="@dimen/font_pixel_24"/>
+
+                    <RelativeLayout 
+                        style="@style/match_parent"
+                        android:layout_marginBottom="30dp"
+                        >
+                <Button
+                        android:id="@+id/bt_repeat"
+                        style="@style/button"
+                        android:layout_alignParentBottom="true"
+                        android:text="@string/band_connect_repeat"
+                        android:textColor="@color/color_font_normal"
+                        android:textSize="@dimen/font_pixel_30"/>
+               </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+         <ScrollView
+                android:id="@+id/layout_3"
+                style="@style/match_parent"
+                android:fillViewport="true"
+                android:visibility="gone"
+                android:scrollbars="none">
+
+            <RelativeLayout
+                    style="@style/match_parent"
+                    android:background="@color/white"
+                    >
+
+                 <LinearLayout
+                    android:id="@+id/layout_band_finish"
+                    style="@style/wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/edge_30"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                     <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@drawable/shape_oval_blue"
+                        android:textSize="@dimen/font_pixel_28"/>
+                    
+                     <View 
+                          android:layout_width="60dp"
+                          android:layout_height="3dp"
+                          android:background="@color/color_blue_connect"
+                          />
+                      <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@drawable/shape_oval_blue"
+                        android:textSize="@dimen/font_pixel_28"/>
+                      <View 
+                          android:layout_width="60dp"
+                          android:layout_height="3dp"
+                          android:background="@color/color_blue_connect"
+                          />
+                      
+                      <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="3"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@drawable/shape_oval_blue"
+                        android:textSize="@dimen/font_pixel_32"/>
+                
+                </LinearLayout>
+                 <TextView
+                        android:id="@+id/tv_band_finish1"
+                        style="@style/match_parent_w"
+                        android:layout_below="@id/layout_band_finish"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="80dp"
+                        android:text="@string/band_connect_notice5"
+                        android:textColor="@color/color_font_blue"
+                        android:textSize="@dimen/font_pixel_36"/>
+                 
+                 <RelativeLayout
+                    style="@style/match_parent"
+                    android:background="@color/white"
+                    android:layout_below="@id/tv_band_finish1"
+                    >
+                 
+                 <TextView
+                        android:id="@+id/tv_band_finish2"
+                        style="@style/match_parent_w"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/band_connect_notice6"
+                        android:textColor="@color/color_font_small"
+                        android:textSize="@dimen/font_pixel_30"/>
+
+                  <ImageView
+                        style="@style/wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/band_connect_success"/>
+                 
+                <Button
+                        android:id="@+id/bt_finish"
+                        style="@style/button"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="30dp"
+                        android:text="@string/band_connect_finish"
+                        android:textColor="@color/color_font_normal"
+                        android:textSize="@dimen/font_pixel_30"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

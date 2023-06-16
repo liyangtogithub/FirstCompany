@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_parent"
+    android:background="@color/app_backgrount" >
+
+    <include
+        android:id="@+id/rl_title"
+        style="@style/title"
+        layout="@layout/title_back" />
+
+    <LinearLayout
+        android:id="@+id/alarm_layout"
+        style="@style/match_parent_w"
+        android:layout_below="@id/rl_title"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_edge" />
+
+        <ImageView
+            style="@style/wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/alarm_image" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/alert_55dp"
+            android:layout_marginTop="@dimen/alert_10dp"
+            android:background="@drawable/backrepeat"
+            android:padding="@dimen/alert_10dp" >
+
+            <TextView
+                android:id="@+id/textView_clock1"
+                style="@style/clock_text_1"
+                />
+
+            <CheckBox
+                android:id="@+id/checkbox_clockSw1"
+                style="@style/clock_checkbox_2" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_edge" />
+
+        <RelativeLayout
+            android:id="@+id/clever_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/alert_55dp"
+            android:background="@drawable/backrepeat"
+            android:padding="@dimen/alert_10dp" >
+
+            <TextView
+                style="@style/clock_text_2"
+                />
+
+            <TextView
+                android:id="@+id/tv_clever"
+                style="@style/alert_sit_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/alert_25dp"
+                android:background="@color/transparent"
+                android:text="30" />
+
+            <ImageView
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/alert_arrows" />
+        </RelativeLayout>
+
+
+        <include layout="@layout/line_edge" />
+
+        <RelativeLayout
+            android:id="@+id/repeat_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backrepeat"
+            android:padding="@dimen/alert_10dp" >
+
+            <TextView
+                android:id="@+id/repeat_title"
+                style="@style/wrap_content"
+                android:textColor="#969596"
+                android:textSize="@dimen/alert_44px"
+                android:text="@string/RemaindRepeatLabel" />
+
+            <LinearLayout
+                style="@style/wrap_content"
+                android:layout_below="@id/repeat_title"
+                 >
+
+                <CheckBox
+                    android:id="@+id/checkbox_mon1"
+                    style="@style/clock_checkbox_1"
+                    android:text="@string/RemaindMon" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_tue1"
+                    style="@style/clock_checkbox_1"
+                    android:text="@string/RemaindTue" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_wed1"
+                    style="@style/clock_checkbox_1"
+                    android:text="@string/RemaindWen" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_thu1"
+                    style="@style/clock_checkbox_1"
+                    android:text="@string/RemaindThu" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_fri1"
+                    style="@style/clock_checkbox_1"
+                    android:text="@string/RemaindFri" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_sat1"
+                    style="@style/clock_checkbox_1"
+                    android:text="@string/RemaindSat" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_sun1"
+                    style="@style/clock_checkbox_1"
+                    android:text="@string/RemaindSun" />
+            </LinearLayout>
+
+            <ImageView
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/alert_arrows" />
+           
+        </RelativeLayout>
+         <include layout="@layout/line_edge" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/match_parent_w"
+        android:layout_below="@id/alarm_layout"
+        android:layout_marginLeft="@dimen/alert_10dp"
+        android:layout_marginRight="@dimen/alert_10dp"
+        android:layout_marginTop="@dimen/alert_10dp"
+        android:text="@string/alarm_notice"
+        android:textColor="#848484"
+        android:textSize="@dimen/alert_36px" />
+
+</RelativeLayout>

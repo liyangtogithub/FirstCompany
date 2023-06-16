@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+            style="@style/match_parent"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:background="@drawable/sport_summary_bg1"
+                          android:paddingTop="@dimen/sport_summary_titlebar_height"
+                          android:paddingLeft="@dimen/sport_summary_chart_margin_horizon"
+                          android:paddingRight="@dimen/sport_summary_chart_margin_horizon"
+                          android:gravity="bottom"
+                          android:orientation="vertical">
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="@dimen/sport_summary_chart_label_margin_top"
+                              android:layout_marginLeft="@dimen/sport_summary_chart_label_margin_left"
+                              android:layout_marginBottom="@dimen/sport_summary_chart_label_margin_bottom"
+                              android:layout_alignParentLeft="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textColor="#333"
+                              android:textSize="@dimen/sport_summary_text1_size"
+                              android:text="@string/SportComplepteLabel"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/textView_aimRate"
+                              android:textColor="#333"
+                              android:textSize="@dimen/sport_summary_text2_size"
+                              android:text="0%"/>
+                </LinearLayout>
+                <com.artfulbits.aiCharts.ChartView
+                        chart="@xml/sport_chart_1"
+                        android:id="@+id/chartView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sport_summary_chart_area_height"/>
+            </LinearLayout>
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/sport_summary_chart_text_margin_horizon"
+                            android:paddingRight="@dimen/sport_summary_chart_text_margin_horizon"
+                            android:layout_marginTop="@dimen/sport_summary_chart_text_margin_top">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/textView_startTime"
+                          android:textColor="#717070"
+                          android:textSize="@dimen/sport_summary_text3_size"
+                          android:layout_alignParentLeft="true"
+                          android:text="10:00"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/textView_endTime"
+                          android:textColor="#717070"
+                          android:textSize="@dimen/sport_summary_text3_size"
+                          android:layout_alignParentRight="true"
+                          android:text="06:00"/>
+            </RelativeLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                          android:orientation="vertical"
+                          android:layout_marginTop="@dimen/sport_summary_list_margin_top"
+                          android:layout_marginBottom="@dimen/sport_summary_list_margin_bottom"
+                          android:layout_marginLeft="@dimen/sport_summary_list_margin_horizon"
+                          android:layout_marginRight="@dimen/sport_summary_list_margin_horizon">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:layout_marginBottom="@dimen/sport_summary_list_item_space">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                               android:src="@drawable/state_1"
+                               android:layout_marginRight="@dimen/sport_summary_list_item_icon_pad_left"/>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:orientation="vertical">
+                        <RelativeLayout android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                            <LinearLayout android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:textColor="#717070"
+                                          android:textSize="@dimen/sport_summary_text3_size"
+                                          android:text="@string/SportStepLabel"/>
+
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:textColor="#333"
+                                          android:textSize="@dimen/sport_summary_text4_size"
+                                          android:text="0"
+                                          android:id="@+id/textView_step"/>
+                            </LinearLayout>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                      android:textColor="#717070"
+                                      android:textSize="@dimen/sport_summary_text3_size"
+                                      android:text="10000"
+                                      android:layout_alignParentRight="true"
+                                      android:id="@+id/textView_stepAim"/>
+                        </RelativeLayout>
+                        <ProgressBar android:layout_width="match_parent" android:layout_height="@dimen/sport_summary_list_item_progressbar_height"
+                                     android:id="@+id/progressBar_step"
+                                     style="?android:attr/progressBarStyleHorizontal"
+                                     android:max="100"
+                                     android:progressDrawable="@drawable/progress_1"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:layout_marginBottom="@dimen/sport_summary_list_item_space">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                               android:src="@drawable/state_2"
+                               android:layout_marginRight="@dimen/sport_summary_list_item_icon_pad_left"/>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:orientation="vertical">
+                        <RelativeLayout android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                            <LinearLayout android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:textColor="#717070"
+                                          android:textSize="@dimen/sport_summary_text3_size"
+                                          android:text="@string/SportAerobicStepLabel"/>
+
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:textColor="#333"
+                                          android:textSize="@dimen/sport_summary_text4_size"
+                                          android:text="0"
+                                          android:id="@+id/textView_aerobicStep"/>
+                            </LinearLayout>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                      android:textColor="#717070"
+                                      android:textSize="@dimen/sport_summary_text3_size"
+                                      android:text="10000"
+                                      android:layout_alignParentRight="true"
+                                      android:id="@+id/textView_aerobicStepAim"/>
+                        </RelativeLayout>
+                        <ProgressBar android:layout_width="match_parent" android:layout_height="@dimen/sport_summary_list_item_progressbar_height"
+                                     android:id="@+id/progressBar_aerobicStep"
+                                     style="?android:attr/progressBarStyleHorizontal"
+                                     android:max="100"
+                                     android:progressDrawable="@drawable/progress_2"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:layout_marginBottom="@dimen/sport_summary_list_item_space">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                               android:src="@drawable/state_3"
+                               android:layout_marginRight="@dimen/sport_summary_list_item_icon_pad_left"/>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:orientation="vertical">
+                        <RelativeLayout android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                            <LinearLayout android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:textColor="#717070"
+                                          android:textSize="@dimen/sport_summary_text3_size"
+                                          android:text="@string/SportCaloriesLabel"/>
+
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:textColor="#333"
+                                          android:textSize="@dimen/sport_summary_text4_size"
+                                          android:text="0"
+                                          android:id="@+id/textView_calorie"/>
+                            </LinearLayout>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                      android:textColor="#717070"
+                                      android:textSize="@dimen/sport_summary_text3_size"
+                                      android:text="10000"
+                                      android:layout_alignParentRight="true"
+                                      android:id="@+id/textView_calorieAim"/>
+                        </RelativeLayout>
+                        <ProgressBar android:layout_width="match_parent" android:layout_height="@dimen/sport_summary_list_item_progressbar_height"
+                                     android:id="@+id/progressBar_calorie"
+                                     style="?android:attr/progressBarStyleHorizontal"
+                                     android:max="100"
+                                     android:progressDrawable="@drawable/progress_3"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                               android:src="@drawable/state_4"
+                               android:layout_marginRight="@dimen/sport_summary_list_item_icon_pad_left"/>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:orientation="vertical">
+                        <RelativeLayout android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                            <LinearLayout android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:textColor="#717070"
+                                          android:textSize="@dimen/sport_summary_text3_size"
+                                          android:text="@string/SportDistanceLabel"/>
+
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:textColor="#333"
+                                          android:textSize="@dimen/sport_summary_text4_size"
+                                          android:text="0"
+                                          android:id="@+id/textView_distance"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:textColor="#717070"
+                                          android:textSize="@dimen/sport_summary_text3_size"
+                                          android:text="km"/>
+                            </LinearLayout>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                      android:textColor="#717070"
+                                      android:textSize="@dimen/sport_summary_text3_size"
+                                      android:text="10"
+                                      android:layout_alignParentRight="true"
+                                      android:id="@+id/textView_distanceAim"/>
+                        </RelativeLayout>
+                        <ProgressBar android:layout_width="match_parent" android:layout_height="@dimen/sport_summary_list_item_progressbar_height"
+                                     android:id="@+id/progressBar_distance"
+                                     style="?android:attr/progressBarStyleHorizontal"
+                                     android:max="100"
+                                     android:progressDrawable="@drawable/progress_4"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/btn_landscape"
+            android:clickable="true"
+            android:id="@+id/btn_toLandscape"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/sport_summary_titlebar_pad_horizon"/>
+
+    <RelativeLayout
+        android:id="@+id/sport_empty_layout"
+        style="@style/match_parent"
+        android:background="@color/white"
+        android:visibility="visible"
+        android:clickable="true"
+        >
+
+        <LinearLayout
+            style="@style/match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <ImageView
+                style="@style/match_parent_w"
+                android:background="@drawable/sport_empty_vertical" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/SportEmptyMovingLabel"
+                android:textColor="#55c3e5"
+                android:textSize="27dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/SportEmptytipLabel"
+                android:textColor="@color/color_font_small"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="45dp"
+            android:text="@string/SportEmptyTimeLabel"
+            android:textColor="#a199c8" />
+    </RelativeLayout>
+
+ <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sport_summary_titlebar_height"
+            android:paddingLeft="@dimen/sport_summary_titlebar_pad_horizon"
+            android:paddingRight="@dimen/sport_summary_titlebar_pad_horizon"
+            android:gravity="center_vertical">
+
+        <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableLeft="@drawable/btn_back_2"
+                android:textColor="@drawable/color_selector_2"
+                android:textSize="@dimen/sport_summary_titlebar_text_size"
+                android:text="XXXX-XX-XX XXX"/>
+    </LinearLayout>
+</RelativeLayout>

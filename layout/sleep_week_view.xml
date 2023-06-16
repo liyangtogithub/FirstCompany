@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res/com.desay.fitband"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="@drawable/rectangle_half_corner_1_white"
+                android:paddingTop="@dimen/sleep_statistics_week_pad_top"
+                android:paddingLeft="@dimen/sleep_statistics_week_pad_horizon"
+                android:paddingRight="@dimen/sleep_statistics_week_pad_horizon"
+                android:paddingBottom="@dimen/sleep_statistics_week_pad_bottom"
+                android:layout_marginLeft="@dimen/sleep_statistics_margin"
+                android:layout_marginRight="@dimen/sleep_statistics_margin"
+                android:layout_marginBottom="@dimen/sleep_statistics_margin">
+    <com.desay.iwan2.module.sleep.widget.SleepChartView2
+            chart="@xml/sleep_chart_2"
+            app:xLabelSize="@dimen/sleep_statistics_chart_xlabel_size"
+            app:yLabelSize="@dimen/sleep_statistics_chart_ylabel_size"
+            android:id="@+id/chartView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</RelativeLayout>

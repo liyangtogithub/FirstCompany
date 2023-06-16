@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                style="@style/match_parent"
+                android:background="@color/app_backgrount">
+
+    <include
+            android:id="@+id/band_sleep_title"
+            style="@style/title"
+            layout="@layout/title_back"/>
+
+    <LinearLayout
+            android:id="@+id/band_sleep_layout"
+            style="@style/match_parent_w"
+            android:layout_below="@id/band_sleep_title"
+            android:orientation="vertical">
+
+        <include layout="@layout/line_edge"/>
+
+        <ImageView
+                style="@style/wrap_content"
+                android:background="@drawable/band_sleep_image"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/band_sleep_item_margin_top_1"
+                android:layout_marginBottom="@dimen/band_sleep_item_margin_top_1"
+                />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:background="@drawable/backrepeat"
+                      android:layout_marginTop="@dimen/band_10dp">
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/band_sleep_item_pad_vertical_1"
+                    android:paddingBottom="@dimen/band_sleep_item_pad_vertical_1"
+                    android:paddingLeft="@dimen/band_sleep_item_pad_horizontal"
+                    android:paddingRight="@dimen/band_sleep_item_pad_horizontal"
+                    >
+
+                <TextView
+                        style="@style/band_sleep_txt_1_style"
+                        android:text="@string/band_sleep_set"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_band_sleep"
+                        style="@style/clock_checkbox_2"/>
+            </RelativeLayout>
+
+            <include layout="@layout/line_edge"/>
+
+            <RelativeLayout
+                    android:id="@+id/layout_sleep_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/band_sleep_item_pad_vertical_2"
+                    android:paddingBottom="@dimen/band_sleep_item_pad_vertical_2"
+                    android:paddingLeft="@dimen/band_sleep_item_pad_horizontal"
+                    android:paddingRight="@dimen/band_sleep_item_pad_horizontal"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_sleep_start"
+                        style="@style/band_sleep_txt_1_style"
+                        android:background="@color/transparent"
+                        android:text="@string/RemaindStartTimeLabel"/>
+
+                <TextView
+                        android:id="@+id/tv_sleep_start_set"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/band_sleep_txt_size_1"
+                        android:layout_alignParentRight="true"
+                        android:textSize="@dimen/band_34px"
+                        android:textColor="#4d4d4d"
+                        android:text="08:00"/>
+
+                <ImageView
+                        style="@style/wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/alert_arrows"/>
+            </RelativeLayout>
+
+            <include layout="@layout/line_edge"/>
+
+            <RelativeLayout
+                    android:id="@+id/layout_sleep_stop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/band_sleep_item_pad_vertical_2"
+                    android:paddingBottom="@dimen/band_sleep_item_pad_vertical_2"
+                    android:paddingLeft="@dimen/band_sleep_item_pad_horizontal"
+                    android:paddingRight="@dimen/band_sleep_item_pad_horizontal"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_sleep_stop"
+                        style="@style/band_sleep_txt_1_style"
+                        android:background="@color/transparent"
+                        android:text="@string/RemaindEndTimeLablel"/>
+
+                <TextView
+                        android:id="@+id/tv_sleep_stop_set"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/band_sleep_txt_size_1"
+                        android:layout_alignParentRight="true"
+                        android:textSize="@dimen/band_34px"
+                        android:textColor="#4d4d4d"
+                        android:text="17:00"/>
+
+                <ImageView
+                        style="@style/wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/alert_arrows"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+            style="@style/match_parent_w"
+            android:layout_below="@id/band_sleep_layout"
+            android:layout_marginTop="@dimen/band_10dp"
+            android:layout_marginLeft="@dimen/band_10dp"
+            android:layout_marginRight="@dimen/band_10dp"
+            android:textColor="#969596"
+            android:text="@string/band_sleep_text"
+            android:textSize="@dimen/band_30px"/>
+
+</RelativeLayout>

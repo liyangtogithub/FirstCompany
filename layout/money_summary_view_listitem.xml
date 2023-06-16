@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/textView_1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="@dimen/money_summary_listitem_text1_size"
+                  android:layout_toLeftOf="@+id/layout_money"
+                  android:layout_centerVertical="true"
+                  android:textColor="#898989"
+                  android:layout_alignParentLeft="true"/>
+
+        <LinearLayout android:id="@+id/layout_money"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:gravity="center_horizontal"
+                      android:orientation="vertical">
+
+            <View android:id="@+id/vertical_line1"
+                  android:layout_width="@dimen/money_summary_listitem_line_width"
+                  android:layout_height="@dimen/money_summary_listitem_line_height"
+                  android:background="@color/money_summary_color_0"
+                  android:layout_centerHorizontal="true"
+                  android:layout_alignTop="@+id/textView_coin"/>
+
+            <TextView android:id="@+id/textView_coin"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:minWidth="32dp"
+                      android:minHeight="32dp"
+                      android:text="0"
+                      android:textSize="@dimen/money_summary_listitem_money_size"
+                      android:gravity="center"
+                      android:background="@drawable/money_shape_round_stroke_gray"
+                      android:layout_centerInParent="true"/>
+
+            <View android:id="@+id/vertical_line2"
+                  android:layout_width="@dimen/money_summary_listitem_line_width"
+                  android:layout_height="@dimen/money_summary_listitem_line_height"
+                  android:background="@color/money_summary_color_0"
+                  android:layout_centerHorizontal="true"
+                  android:layout_below="@+id/textView_coin"/>
+
+        </LinearLayout>
+
+        <TextView android:id="@+id/textView_2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="right"
+                  android:textSize="@dimen/money_summary_listitem_text1_size"
+                  android:layout_toRightOf="@+id/layout_money"
+                  android:layout_marginLeft="5dp"
+                  android:layout_centerVertical="true"
+                  android:textColor="#898989"
+                  android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="@dimen/money_summary_divider"
+          android:background="#ededed"
+          android:id="@+id/divider"
+          android:layout_alignParentBottom="true"/>
+</LinearLayout>

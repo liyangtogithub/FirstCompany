@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res/com.desay.fitband"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="@drawable/rectangle_half_corner_1_white"
+                android:layout_marginLeft="@dimen/sport_statistics_margin"
+                android:layout_marginRight="@dimen/sport_statistics_margin"
+                android:layout_marginBottom="@dimen/sport_statistics_margin">
+    <com.desay.iwan2.module.sport.widget.SportChartView1
+            chart="@xml/sport_chart_2"
+            android:background="@drawable/sport_day_bg1"
+            app:xLabelSize="@dimen/sport_statistics_chart_xlabel_size"
+            app:yLabelSize="@dimen/sport_statistics_chart_ylabel_size"
+            android:id="@+id/chartView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <RelativeLayout
+            android:id="@+id/sport_statistic_empty_layout"
+            style="@style/match_parent"
+            android:visibility="visible"
+            android:background="@drawable/sport_empty_horizontal"
+            android:orientation="vertical"
+            >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sport_statistics_chart_20"
+                android:textColor="#a199c8"
+                android:text="@string/SportEmptyTimeLabel"/>
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="@dimen/sport_statistics_chart_20"
+                android:layout_alignParentRight="true"
+                android:gravity="center">
+         <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/SportEmptyMovingLabel"
+                android:textColor="#55c1ea"
+                android:textSize="@dimen/sleep_summary_no_data_text_size"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/SportEmptytipLabel"
+                android:textColor="@color/color_font_small"
+                android:textSize="20dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

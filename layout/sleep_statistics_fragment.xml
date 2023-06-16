@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="#e3e2e2">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical">
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/sleep_statistics_titlebar_pad_vartical"
+                        android:paddingBottom="@dimen/sleep_statistics_titlebar_pad_vartical"
+                        android:paddingLeft="@dimen/sleep_statistics_titlebar_pad_horizon"
+                        android:paddingRight="@dimen/sleep_statistics_titlebar_pad_horizon"
+                        android:background="@drawable/rectangle_half_corner_1_gray"
+                        android:layout_marginLeft="@dimen/sleep_statistics_margin"
+                        android:layout_marginRight="@dimen/sleep_statistics_margin"
+                        android:layout_marginTop="@dimen/sleep_statistics_margin"
+                        android:layout_marginBottom="@dimen/sleep_statistics_titlebar_margin_bottom">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/textView_1"
+                      android:textColor="#676767"
+                      android:textSize="@dimen/sleep_statistics_text1_size"
+                      android:text="XXXX-XX-XX XXX"
+                      android:layout_alignParentLeft="true"
+                      android:layout_centerVertical="true"
+                      android:singleLine="true"
+                      android:gravity="left"
+                      android:layout_toLeftOf="@+id/textView_2"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/textView_2"
+                      android:textColor="#333"
+                      android:textSize="@dimen/sleep_statistics_text2_size"
+                      android:layout_centerInParent="true"
+                      android:text="@string/SleepDurationLabel"/>
+            <RadioGroup android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioGroup"
+                        android:orientation="horizontal"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:id="@+id/radio_day"
+                             android:textColor="@drawable/color_selector_1"
+                             android:textSize="@dimen/sleep_statistics_text2_size"
+                             android:button="@null"
+                             android:background="@null"
+                             android:textStyle="bold"
+                             android:text="@string/SportSelectDay"/>
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:id="@+id/radio_week"
+                             android:textColor="@drawable/color_selector_1"
+                             android:textSize="@dimen/sleep_statistics_text2_size"
+                             android:button="@null"
+                             android:background="@null"
+                             android:textStyle="bold"
+                             android:singleLine="true"
+                             android:layout_marginLeft="@dimen/sleep_statistics_tab_space"
+                             android:layout_marginRight="@dimen/sleep_statistics_tab_space"
+                             android:text="@string/SportSelectWeek"/>
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:id="@+id/radio_month"
+                             android:textColor="@drawable/color_selector_1"
+                             android:textSize="@dimen/sleep_statistics_text2_size"
+                             android:button="@null"
+                             android:background="@null"
+                             android:textStyle="bold"
+                             android:singleLine="true"
+                             android:layout_marginRight="@dimen/sleep_statistics_tab_space"
+                             android:text="@string/SportSelectMonth"/>
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:id="@+id/radio_year"
+                             android:textColor="@drawable/color_selector_1"
+                             android:textSize="@dimen/sleep_statistics_text2_size"
+                             android:button="@null"
+                             android:background="@null"
+                             android:textStyle="bold"
+                             android:singleLine="true"
+                             android:text="@string/SportSelectYear"/>
+            </RadioGroup>
+        </RelativeLayout>
+        <TabHost android:layout_width="match_parent" android:layout_height="match_parent"
+                 android:id="@android:id/tabhost">
+            <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+            </TabWidget>
+            <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <!--<include android:id="@+id/layout_sleepDay" layout="@layout/sleep_day_view"/>-->
+                <android.support.v4.view.ViewPager
+                        android:id="@+id/layout_sleepDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:persistentDrawingCache="animation"/>
+                <include android:id="@+id/layout_sleepWeek" layout="@layout/sleep_week_view"/>
+                <include android:id="@+id/layout_sleepMonth" layout="@layout/sleep_month_view"/>
+                <include android:id="@+id/layout_sleepYear" layout="@layout/sleep_year_view"/>
+
+            </FrameLayout>
+        </TabHost>
+    </LinearLayout>
+</RelativeLayout>

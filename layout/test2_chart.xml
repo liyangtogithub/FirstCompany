@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res/com.desay.fitband"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+    <com.artfulbits.aiCharts.ChartView
+            android:id="@+id/chartView"
+            chart="@xml/test_chart"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+    <!--<com.desay.iwan2.module.sport.widget.SportChartView1-->
+            <!--chart="@xml/sport_chart_2"-->
+            <!--app:xLabelSize="@dimen/sport_statistics_chart_xlabel_size"-->
+            <!--app:yLabelSize="@dimen/sport_statistics_chart_ylabel_size"-->
+            <!--android:id="@+id/chartView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"/>-->
+</LinearLayout>

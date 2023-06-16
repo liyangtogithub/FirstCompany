@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/match_parent"
+                android:background="#fff">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:layout_centerInParent="true"
+                      android:paddingTop="50dp"
+                      android:paddingLeft="20dp"
+                      android:paddingRight="20dp">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                       android:layout_gravity="center_horizontal"
+                       android:src="@drawable/calibration_bg"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:layout_marginTop="30dp"
+                      android:textSize="18sp"
+                      android:textColor="#424243"
+                      android:text="@string/band_correct_watch_explain_title"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:textSize="12sp"
+                      android:textColor="#424243"
+                      android:text="@string/band_correct_watch_explain"/>
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/btn_calibration"
+                    android:background="@drawable/selector_button"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textSize="18sp"
+                    android:text="@string/band_correct_watch_btn"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+            android:id="@+id/sleep_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+        <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_icon"
+                android:drawableLeft="@drawable/btn_return_2"
+                android:textColor="#424243"
+                android:textSize="17sp"
+                android:text="@string/band_correct_watch"/>
+    </LinearLayout>
+</RelativeLayout>

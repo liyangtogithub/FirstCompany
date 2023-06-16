@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_parent"
+    android:background="@color/app_backgrount" >
+
+    <include
+        android:id="@+id/alert_title"
+        style="@style/title"
+        layout="@layout/title_back" />
+
+    <LinearLayout
+        android:id="@+id/alert_layout"
+        style="@style/match_parent_w"
+        android:layout_below="@id/alert_title"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_edge" />
+        
+        <ImageView 
+             style="@style/wrap_content"
+             android:background="@drawable/alert_sit_image"
+             android:layout_gravity="center_horizontal"
+             />
+        
+        <RelativeLayout
+            android:padding="@dimen/alert_10dp"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="@dimen/alert_10dp"
+            android:background="@drawable/backrepeat"
+            android:layout_height="@dimen/alert_55dp" >
+
+            <TextView
+                android:id="@+id/tv_sit_alert"
+                style="@style/alert_sit_tv"
+                android:text="@string/RemaindIdleSetting" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sit_alert"
+                style="@style/clock_checkbox_2" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_edge" />
+
+        <RelativeLayout
+            android:padding="@dimen/alert_10dp"
+            android:layout_width="fill_parent"
+            android:background="@drawable/backrepeat"
+            android:layout_height="@dimen/alert_55dp" >
+
+            <TextView
+                android:id="@+id/tv_sit_time"
+                style="@style/alert_sit_tv"
+                android:text="@string/RemaindInactiveLabel" />
+
+            <TextView
+                android:id="@+id/tv_sit_time_set"
+                style="@style/alert_sit_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/purpose_20dp"
+                android:text="@string/RemaindSmartThr" />
+            
+             <ImageView
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/alert_arrows" />
+        </RelativeLayout>
+
+       <include layout="@layout/line_edge" />
+
+        <RelativeLayout
+            android:padding="@dimen/alert_10dp"
+            android:layout_width="fill_parent"
+            android:background="@drawable/backrepeat"
+            android:layout_height="@dimen/alert_55dp" >
+
+            <TextView
+                android:id="@+id/tv_sit_start"
+                style="@style/alert_sit_tv"
+                android:text="@string/RemaindStartTimeLabel" />
+
+            <TextView
+                android:id="@+id/tv_sit_start_set"
+                style="@style/alert_sit_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/purpose_20dp"
+                android:text="08:00" />
+            
+             <ImageView
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/alert_arrows" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_edge" />
+
+        <RelativeLayout
+            android:padding="@dimen/alert_10dp"
+            android:layout_width="fill_parent"
+            android:background="@drawable/backrepeat"
+            android:layout_height="@dimen/alert_55dp" >
+
+            <TextView
+                android:id="@+id/tv_sit_stop"
+                style="@style/alert_sit_tv"
+                android:text="@string/RemaindEndTimeLablel" />
+
+            <TextView
+                android:id="@+id/tv_sit_stop_set"
+                style="@style/alert_sit_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/purpose_20dp"
+                android:text="08:00" />
+            
+             <ImageView
+                style="@style/wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/alert_arrows" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_edge" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/match_parent_w"
+        android:layout_below="@id/alert_layout"
+        android:layout_marginTop="@dimen/alert_10dp"
+        android:layout_marginLeft="@dimen/alert_10dp"
+        android:layout_marginRight="@dimen/alert_10dp"
+        android:text="@string/alert_notice"
+        android:textColor="#848484"
+        android:textSize="@dimen/alert_36px" />
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/alert_10dp"
+    android:layout_marginRight="@dimen/alert_10dp"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:id="@+id/lineat_alarm"
+        android:layout_width="@dimen/alert_300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/alert_10dp" >
+
+        <com.desay.wheel.widget.WheelView
+            android:id="@+id/hour"
+            android:layout_width="@dimen/alert_130dp"
+            android:layout_height="@dimen/alert_105dp"
+            android:layout_marginLeft="@dimen/alert_10dp" />
+
+        <com.desay.wheel.widget.WheelView
+            android:id="@+id/mins"
+            android:layout_width="@dimen/alert_130dp"
+            android:layout_height="@dimen/alert_105dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/alert_10dp" />
+    </RelativeLayout>
+
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alert_1dp"
+        android:background="@color/color_line" 
+        android:layout_below="@id/lineat_alarm"
+        />
+    
+    <LinearLayout
+        android:layout_width="@dimen/alert_280dp"
+        android:layout_height="@dimen/alert_50dp"
+        android:layout_marginTop="@dimen/alert_1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/lineat_alarm"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/dialog_sure"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/alert_48dp"
+            android:layout_weight="1"
+            android:text="@string/sure_str"
+            android:textColor="@color/color_font_normal"
+            android:textSize="@dimen/alert_40px" 
+            android:background="@drawable/selector_button"
+            />
+
+        <Button
+            android:id="@+id/dialog_cancle"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/alert_48dp"
+            android:layout_weight="1"
+            android:text="@string/music_cancle"
+            android:textColor="@color/color_font_normal"
+            android:textSize="@dimen/alert_40px" 
+            android:background="@drawable/selector_button"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

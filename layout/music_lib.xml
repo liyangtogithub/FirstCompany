@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/music_45dp"
+        android:background="@color/skyblue"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/title_back" />
+
+        <Button
+            android:id="@+id/complish"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/music_10dp"
+            android:background="@drawable/music_bg_button"
+            android:textColor="@color/color_font_normal"
+            android:textSize="@dimen/music_36px" />
+    </RelativeLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/music_1dp"
+        android:layout_below="@id/rl_title"
+        android:layout_marginLeft="@dimen/music_25dp"
+        layout="@layout/line_edge" />
+
+    <ListView
+        android:id="@+id/lib_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/music_25dp"
+        android:background="@color/white"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="singleChoice"
+        android:divider="#d6d6d6"
+        android:dividerHeight="@dimen/music_1dp"
+        android:listSelector="@color/transparent" />
+
+</LinearLayout>

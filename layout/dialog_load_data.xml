@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/edge_20"
+    android:layout_marginRight="@dimen/edge_20"
+   android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:text="@string/Title_DataDownload"
+        android:textColor="@color/color_font_normal"
+        android:textSize="@dimen/font_pixel_26" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_load"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/radio_bt_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox_music"
+            android:text="@string/Label_downloadAll"
+            android:textColor="@color/color_font_normal"
+            android:textSize="@dimen/font_pixel_20"/>
+
+        <RadioButton
+            android:id="@+id/radio_bt_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox_music"
+            android:singleLine="true"
+            android:checked="true"
+            android:text="@string/Label_downloadCustom"
+            android:textColor="@color/color_font_normal"
+            android:textSize="@dimen/font_pixel_20"/>
+    </RadioGroup>
+
+    <LinearLayout
+        style="@style/wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/tv_start_time"
+            style="@style/button_dfu_load"
+            android:gravity="center_vertical"
+            android:text="2014 年 1 月  "
+            android:textColor="@color/color_font_normal"
+            android:textSize="@dimen/font_pixel_20" />
+
+        <LinearLayout
+            android:layout_width="15dp"
+            android:layout_height="1px"
+            android:background="@color/color_line"
+            android:gravity="center"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/tv_end_time"
+            style="@style/button_dfu_load"
+            android:gravity="center_vertical"
+            android:text="2014 年 4 月  "
+            android:textColor="@color/color_font_normal"
+            android:textSize="@dimen/font_pixel_20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="7dp" >
+
+        <Button
+            android:id="@+id/btn_update"
+            style="@style/button_dfu_load"
+            android:text="@string/Label_downloadStart"
+            android:textSize="@dimen/font_pixel_26" />
+
+        <Button
+            android:id="@+id/btn_wait"
+            style="@style/button_dfu_load"
+            android:text="@string/RemaindSetCancel"
+            android:textSize="@dimen/font_pixel_26" />
+    </LinearLayout>
+
+</LinearLayout>

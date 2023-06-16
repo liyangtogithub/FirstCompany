@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+   <TextView
+      android:id="@+id/tv_title"
+      android:layout_width="fill_parent"
+      android:layout_height="@dimen/edge_90"
+      android:text="@string/dfu_alert_title"
+      android:background="@color/white"
+      android:textSize="@dimen/font_pixel_40"
+      android:textColor="@color/color_font_normal"
+      android:gravity="center"
+       />
+
+   <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/tv_title"
+       android:background="@color/white"
+       android:textColor="@color/white" >
+
+   <TextView
+       android:id="@+id/tv_toast"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="@dimen/edge_70"
+       android:layout_marginRight="@dimen/edge_70"
+       android:layout_marginBottom="@dimen/edge_50"
+       android:layout_marginTop="@dimen/edge_50"
+       android:text="@string/upgrade_app_info"
+       android:textColor="@color/black"
+       android:textSize="@dimen/font_pixel_30" />
+
+   <LinearLayout
+	   style="@style/match_parent_w"
+	   android:layout_centerHorizontal="true"
+       android:layout_marginLeft="@dimen/edge_30"
+       android:layout_marginRight="@dimen/edge_30"
+       android:layout_below="@+id/tv_toast">
+
+   <Button
+       android:id="@+id/btn_update"
+       style="@style/button_dfu_load"
+       android:layout_marginLeft="@dimen/edge_40"
+       android:layout_marginRight="@dimen/edge_20"
+       android:layout_weight="3"
+       android:text="@string/dfu_alert_update"/>
+   <Button
+       android:id="@+id/btn_cancel"
+       style="@style/button_dfu_load"
+       android:layout_marginLeft="@dimen/edge_20"
+       android:layout_marginRight="@dimen/edge_40"
+       android:layout_weight="3"
+       android:text="@string/music_cancle"/>
+</LinearLayout>
+</RelativeLayout>
+   <View 
+       android:layout_width="fill_parent"
+       android:layout_height="@dimen/edge_30"  
+       android:background="@color/white"/>
+</LinearLayout>

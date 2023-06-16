@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/sleep_statistics_margin"
+                android:layout_marginRight="@dimen/sleep_statistics_margin"
+                android:layout_marginBottom="@dimen/sleep_statistics_margin">
+    <ScrollView
+            style="@style/match_parent"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:background="@drawable/sleep_day_bg1"
+                      android:paddingTop="@dimen/sleep_statistics_day_pad_vertical"
+                      android:paddingLeft="@dimen/sleep_statistics_day_pad_horizon"
+                      android:paddingRight="@dimen/sleep_statistics_day_pad_horizon"
+                      android:paddingBottom="@dimen/sleep_statistics_day_pad_vertical"
+                      android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:gravity="left">
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_alignParentLeft="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textColor="#676767"
+                              android:textSize="@dimen/sleep_statistics_day_text1_size"
+                              android:text="@string/SleepScoreLabel"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/textView_quality"
+                              android:textColor="#5100ad"
+                              android:textSize="@dimen/sleep_statistics_day_text2_size"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_alignParentRight="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textColor="#676767"
+                              android:textSize="@dimen/sleep_statistics_day_text1_size"
+                              android:text="@string/SleepDeep"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/textView_deepRate"
+                              android:textColor="#5100ad"
+                              android:textSize="@dimen/sleep_statistics_day_text2_size"
+                              android:text="0%"/>
+                </LinearLayout>
+            </LinearLayout>
+            <com.desay.iwan2.module.sleep.widget.SleepChartView1
+                    chart="@xml/sleep_chart_1"
+                    android:id="@+id/chartView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sleep_statistics_day_chart_height"/>
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/textView_startTime"
+                          android:textColor="#717070"
+                          android:textSize="@dimen/sleep_statistics_day_text3_size"
+                          android:layout_alignParentLeft="true"
+                          android:text="10:00"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/textView_endTime"
+                          android:textColor="#717070"
+                          android:textSize="@dimen/sleep_statistics_day_text3_size"
+                          android:layout_alignParentRight="true"
+                          android:text="06:00"/>
+            </RelativeLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                              android:gravity="center"
+                              android:layout_weight="1">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                               android:src="@drawable/state_shallow"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/textView_shallow"
+                              android:textSize="@dimen/sleep_statistics_day_text4_size"
+                              android:textColor="#717070"
+                              android:text="@string/SleepLight"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                              android:gravity="center"
+                              android:layout_weight="1">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                               android:src="@drawable/state_deep"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/textView_deep"
+                              android:textSize="@dimen/sleep_statistics_day_text4_size"
+                              android:textColor="#717070"
+                              android:text="@string/SleepDeep"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                              android:gravity="center"
+                              android:layout_weight="1">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                               android:src="@drawable/state_dream"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/textView_dream"
+                              android:textSize="@dimen/sleep_statistics_day_text4_size"
+                              android:textColor="#717070"
+                              android:text="@string/SleepDream"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                              android:gravity="center"
+                              android:layout_weight="1">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                               android:src="@drawable/state_wakeup"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/textView_wakeup"
+                              android:textSize="@dimen/sleep_statistics_day_text4_size"
+                              android:textColor="#717070"
+                              android:text="@string/SleepWake"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+            android:id="@+id/sleep_statistic_empty_layout"
+            style="@style/match_parent"
+            android:clickable="true"
+            android:visibility="visible"
+            android:background="@drawable/sleep_empty_horizontal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sleep_statistics_titlebar_pad_horizon"
+                android:textColor="#a199c8"
+                android:text="@string/SleepEmptyTimeLabel"/>
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="10dp">
+
+        <TextView
+                android:id="@+id/sleep_empty_tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/SleepEmptytipLabel"
+                android:textColor="@color/color_font_small"
+                android:textSize="@dimen/sleep_summary_text2_size"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/SleepEmptyLabel"
+                android:textColor="#856498"
+                android:textSize="@dimen/sleep_summary_no_data_text_size"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
