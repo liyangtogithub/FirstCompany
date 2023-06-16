@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.desay.fitband"
+          android:versionCode="45"
+          android:versionName="2.0.0">
+
+    <uses-sdk android:minSdkVersion="9"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="no.nordicsemi.android.LOG"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+
+    <application
+            android:name="com.desay.iwan2.common.app.MyApplication"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:debuggable="true"
+            android:theme="@style/iwan2AppTheme"
+            android:persistent="true">
+        <meta-data android:name="BaiduMobAd_CHANNEL" android:value="@string/customer_type_code"/>
+        <meta-data android:name="BaiduMobAd_STAT_ID" android:value="48bc8ac8cd"/>
+        <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true"/>
+
+        <activity android:name="com.test.TestActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name="com.desay.iwan2.module.start.StartActivity"
+                  android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.desay.iwan2.module.MainActivity"
+                android:hardwareAccelerated="false"
+                android:screenOrientation="portrait"
+                android:launchMode="singleTask"
+                android:theme="@style/Theme.Sherlock.NoActionBar">
+        </activity>
+
+        <activity
+                android:name="com.desay.iwan2.module.sleep.SleepActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name="com.desay.iwan2.module.sport.SportActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name="com.desay.iwan2.module.money.MoneyActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name="com.desay.iwan2.module.activity.ActivityActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name="com.desay.iwan2.module.about.AboutActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name="com.desay.iwan2.module.help.HelpActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name="com.desay.iwan2.module.correct.CorrectHeartrateActivity"
+                android:screenOrientation="portrait"/>
+
+        <!-- login begain -->
+        <activity
+                android:name="com.desay.iwan2.module.userinfo.LoginActivity"
+                android:windowSoftInputMode="adjustResize"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.desay.iwan2.module.userinfo.InfoActivity"
+                android:windowSoftInputMode="adjustResize"
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.Sherlock.NoActionBar"/>
+        <activity android:name="com.desay.iwan2.module.userinfo.ChooseCityActivity"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboardHidden|orientation"/>
+        <!-- login over -->
+
+        <!-- alert begain -->
+        <activity
+                android:name="com.desay.iwan2.module.alarmclock.AlertActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name="com.desay.iwan2.module.alarmclock.AlarmActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name="com.desay.iwan2.module.alarmclock.LongSitActivity"
+                android:screenOrientation="portrait"/>
+
+
+        <!-- alert over -->
+
+        <!-- purpose begain-->
+        <activity
+                android:name="com.desay.iwan2.module.purpose.MyPurposeActivity"
+                android:screenOrientation="portrait"/>
+        <!-- purpose over -->
+
+        <!-- bandManage begain-->
+        <activity
+                android:name="com.desay.iwan2.module.band.BandManageActivity"
+                android:screenOrientation="portrait"/>
+        <!-- bandManage over -->
+
+        <!-- dataManage begain-->
+        <activity
+                android:name="com.desay.iwan2.module.data.DataManageActivity"
+                android:screenOrientation="portrait"
+                android:launchMode="standard"/>
+        <!-- dataManage over -->
+
+        <!-- music begain -->
+        <activity
+                android:name="com.desay.iwan2.module.music.MusicMain"
+                android:configChanges="keyboardHidden|orientation"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.desay.iwan2.module.music.MusicLib"
+                android:configChanges="keyboardHidden|orientation"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.desay.iwan2.module.music.MusicSet"
+                android:configChanges="keyboardHidden|orientation"
+                android:screenOrientation="portrait"/>
+        <service android:name="com.desay.iwan2.module.music.MusicService"/>
+        <receiver android:name="com.desay.iwan2.module.music.MusicAlarmManagerReceiver"/>
+        <!-- music over -->
+
+        <!-- dfu begain -->
+        <activity
+                android:name="com.desay.iwan2.module.dfu.DfuActivity"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                />
+        <activity android:name="com.desay.iwan2.module.dfu.NotificationActivity"
+                  android:label="@string/dfu_feature_title"/>
+        <service
+                android:name="com.desay.iwan2.module.dfu.DfuService"
+                android:label="@string/dfu_feature_title"/>
+        <!-- dfu over -->
+
+        <service
+                android:name="com.desay.iwan2.common.app.service.MyService"
+                android:exported="true"/>
+
+        <!-- ShareSDK的注册开始-->
+        <activity
+                android:name="cn.sharesdk.framework.ShareSDKUIShell"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <meta-data android:name="AuthorizeAdapter" android:value="cn.sharesdk.onekeyshare.MyAdapter"/>
+
+            <meta-data android:name="QZoneWebShareAdapter" android:value="cn.sharesdk.demo.MyQZoneWebShareAdapter"/>
+
+            <intent-filter>
+                <data android:scheme="db-7janx53ilz11gbs"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <intent-filter>
+                <data android:scheme="tencent1102963587"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.desay.fitband.wxapi.WXEntryActivity"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:exported="true"/>
+        <!-- ShareSDK的注册结束-->
+
+        <meta-data android:name="TA_APPKEY" android:value="AqcgbWvDXUt6qPAqZJM"/>
+        <meta-data android:name="InstallChannel" android:value="0"/>
+        <activity
+                android:name="com.tencent.tauth.AuthActivity"
+                android:noHistory="true"
+                android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="1102963587"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.connect.common.AssistActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                />
+
+        <!-- 百度推送 -->
+        <receiver android:name="com.desay.iwan2.common.server.push.PushMsgReceiver">
+            <intent-filter>
+                <!-- 接收 push 消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE"/>
+                <!-- 接收 bind、setTags 等 method 的返回结果 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE"/>
+                <!-- 可选。接受通知点击事件，和通知自定义内容 -->
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK"/>
+            </intent-filter>
+        </receiver>
+        <!-- push service start -->
+        <!-- 用于接收系统消息以保证 PushService 正常运行 -->
+        <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
+                  android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW"/>
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK"/>
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <!-- Push 服务接收客户端发送的各种请求-->
+        <!-- 注意：RegistrationReceiver 在 2.1.1 及之前版本有拼写失误，为 RegistratonReceiver ，用新版本 SDK 时请更改为如下代码-->
+        <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"
+                  android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD"/>
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <!-- Push 服务 -->
+        <!-- 注意：在 4.0 (包含)之后的版本需加上如下所示的 intent-filter action -->
+        <service
+                android:name="com.baidu.android.pushservice.PushService"
+                android:exported="true"
+                android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
